@@ -73,6 +73,8 @@ Open `MOT Tracker`.
 
 Expected behavior:
 
+- Live DVSA credentials are not committed in the repo because GitHub blocks tracked application secrets.
+- If you want to test live DVSA lookups, copy `.env.example` to `.env` and paste the DVSA values there before starting the app.
 - On a network where DVSA accepts the request, the backend updates MOT data in SQLite.
 - On a network blocked by DVSA’s Imperva/Incapsula layer, the app shows a clear message instead of raw HTML, and the reviewer can use the `GOV.UK` button for a manual MOT lookup.
 

@@ -37,7 +37,8 @@ This repository is packaged for local Mac testing with a project-local Python vi
 
 ## Important Integration Notes
 
-- DVSA is wired through the backend and defaults to the provided credentials.
+- DVSA is wired through the backend, but the live credentials are not committed in this repository because GitHub push protection blocks tracked application secrets.
+- If reviewers want to test live DVSA calls, they can place the provided values into `.env` using `.env.example` as the template.
 - Some networks are blocked upstream by DVSA’s Imperva/Incapsula layer. In that case the app shows a clear fallback message and reviewers can use the `GOV.UK` button on the MOT card instead.
 - Google Maps route links work without extra setup.
 - Google Maps autocomplete is code-complete but requires a real `GOOGLE_MAPS_API_KEY` to be placed in `.env` if live autocomplete is desired.
